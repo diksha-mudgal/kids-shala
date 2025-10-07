@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Shala by Diksha Mudgal - Fun Learning!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Neue', sans-serif;
+            background: linear-gradient(to bottom, #FFD700, #FF69B4);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 5px solid #FF4500;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-container {
+            flex-shrink: 0;
+        }
+
+        .logo {
+            height: 80px;
+            width: auto;
+            border-radius: 10px;
+            border: 3px solid #FF1493;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .header-content {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        header h1 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2.2em;
+            color: #FF1493;
+            margin: 0;
+            text-shadow: 2px 2px #FFD700;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        nav button {
+            font-family: 'Fredoka One', cursive;
+            padding: 8px 16px;
+            background: #00BFFF;
+            border: 3px solid #1E90FF;
+            border-radius: 15px;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+            font-size: 1em;
+        }
+
+        nav button:hover {
+            transform: scale(1.1);
+            background: #FFD700;
+            color: #FF1493;
+        }
+
+        main {
+            margin-top: 160px;
+            padding: 20px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 3px solid #FF6347;
+            max-width: 1200px;
+        }
+
+        .section h2 {
+            font-family: 'Fredoka One', cursive;
+            color: #FF1493;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 2px 2px #FFD700;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 3px solid #FF6347;
+            border-radius: 15px;
+            padding: 20px;
+            width: 280px;
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-family: 'Fredoka One', cursive;
+            color: #4B0082;
+            margin: 0 0 15px;
+            font-size: 1.4em;
+        }
+
+        .card p {
+            font-size: 1em;
+            color: #555;
+            margin: 8px 0;
+        }
+
+        .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-top: 5px solid #FF4500;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #FF1493;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .login-form {
+            text-align: center;
+            background: white;
+            border: 3px solid #FF6347;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .login-form input {
+            padding: 15px;
+            margin: 12px 0;
+            border: 2px solid #00BFFF;
+            border-radius: 10px;
+            font-family: 'Comic Neue', sans-serif;
+            width: 90%;
+            font-size: 1.1em;
+        }
+
+        .login-form button {
+            font-family: 'Fredoka One', cursive;
+            padding: 15px 30px;
+            background: #FF1493;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 1.2em;
+            transition: all 0.3s;
+        }
+
+        .login-form button:hover {
+            background: #FFD700;
+            color: #FF1493;
+            transform: scale(1.05);
+        }
+
+        .login-message {
+            display: none;
+            color: #4B0082;
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.5em;
+            margin-top: 20px;
+            padding: 20px;
+            background: #FFD700;
+            border-radius: 12px;
+            border: 3px solid #FF1493;
+            animation: celebrate 1s ease-in-out;
+        }
+
+        @keyframes celebrate {
+            0% { transform: scale(0.8); opacity: 0; }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .form-title {
+            font-family: 'Fredoka One', cursive;
+            color: #FF1493;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .form-subtitle {
+            color: #4B0082;
+            font-size: 1.2em;
+            margin-bottom: 25px;
+        }
+
+        /* Enhanced Games Section Styles */
+        .activity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .activity-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 3px solid;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .quiz-card { border-color: #FF6B6B; background: linear-gradient(135deg, #FF6B6B, #FFE66D); }
+        .memory-card { border-color: #45B7D1; background: linear-gradient(135deg, #45B7D1, #96CEB4); }
+        .riddles-card { border-color: #DDA0DD; background: linear-gradient(135deg, #DDA0DD, #98D8C8); }
+        .game-card { border-color: #98D8C8; background: linear-gradient(135deg, #98D8C8, #F7DC6F); }
+        .story-card { border-color: #F7DC6F; background: linear-gradient(135deg, #F7DC6F, #BB8FCE); }
+
+        .activity-icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .activity-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+
+        .tag {
+            background: #FFD700;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .coming-soon {
+            background: #FF6B6B;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            margin: 15px 0;
+            text-align: center;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .activity-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 2px dashed #FFD700;
+            font-size: 1em;
+        }
+
+        /* Status indicator styles */
+        .status-indicator {
+            background: #FFD700;
+            color: #FF1493;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            margin: 5px 0;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="Kids Shala Logo" class="logo">
+        </div>
+        <div class="header-content">
+            <h1>Kids Shala by Diksha Mudgal 🌟</h1>
+            <p>Learn & Play Like Cartoon Heroes! 🦸‍♀️🦸‍♂️</p>
+            <nav>
+                <button onclick="scrollToSection('textbooks')">NCERT Textbooks 📚</button>
+                <button onclick="scrollToSection('worksheets')">Worksheets ✍️</button>
+                <button onclick="scrollToSection('exams')">Exams 📝</button>
+                <button onclick="scrollToSection('funGames')">Fun & Games 🎮</button>
+                <button onclick="scrollToSection('login')">Join Us 🌟</button>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Textbooks Section -->
+    <section id="textbooks" class="section">
+        <h2>📚 NCERT Textbooks - Magic Learning! 🚀</h2>
+        <div class="card-container" id="textbooks-cards"></div>
+    </section>
+
+    <!-- Worksheets Section -->
+    <section id="worksheets" class="section">
+        <h2>✍️ Worksheets - Practice & Shine! ✨</h2>
+        <div class="card-container" id="worksheets-cards"></div>
+    </section>
+
+    <!-- Exams Section -->
+    <section id="exams" class="section">
+        <h2>📝 Exams - Test Your Knowledge! 🎯</h2>
+        <div class="card-container" id="exams-cards"></div>
+    </section>
+
+    <!-- Fun & Games Section -->
+    <section id="funGames" class="section">
+        <h2>🎮 Fun & Games - Play Like a Star! 🌈</h2>
+        <div class="activity-grid" id="games-cards"></div>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="section">
+        <h2>🌟 Join Our Learning Family! 🌟</h2>
+        <div class="login-form">
+            <div class="form-title">Welcome to Kids Shala! 🎉</div>
+            <div class="form-subtitle">Join us for amazing learning adventures!</div>
+
+            <form id="joinForm">
+                <input type="email" id="email" placeholder="📧 Parent's Email ID" required />
+                <input type="password" id="password" placeholder="🔒 Create a Secret Code" required />
+                <input type="text" id="childName" placeholder="👶 Child's Name" required />
+                <input type="number" id="childAge" placeholder="🎂 Child's Age" min="1" max="15" required />
+
+                <button type="submit">Join Us Now! 🚀</button>
+            </form>
+
+            <div id="thankYouMessage" class="login-message">
+                <div style="font-size: 2em; margin-bottom: 10px;">🎉 Thank You for Joining Us! 🎉</div>
+                <p>Welcome to the Kids Shala family! Get ready for amazing learning adventures! 🌈</p>
+                <p>We've sent a welcome email to <span id="userEmail" style="color: #FF1493; font-weight: bold;"></span></p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Subscribe us on Youtube Channel <a href="https://youtube.com/@kidsshala1586?si=S2saPK0CBI5hFQNN">YouTube</a> | Visit our <a href="https://t.me/kidsshala">Telegram Channel</a></p>
+</footer>
+
+<script>
+    // All data integrated in one file - COMPLETE with Classes 1-5, KBC Quiz, and Exams Section
+    const appData = {
+        "metadata": {
+            "name": "Kids Shala",
+            "description": "Fun Learning Platform by Diksha Mudgal",
+            "version": "1.0",
+            "lastUpdated": "2024-01-01",
+            "channelName": "Kids Shala by Diksha Mudgal",
+            "socialLinks": {
+                "youtube": "https://youtube.com/@KidsShalaByDikshaMudgal",
+                "website": "https://kidsshala.com"
+            }
+        },
+        "curriculum": {
+            "type": "curriculum",
+            "name": "Magic Classes",
+            "description": "Super fun NCERT learning adventures for little stars!",
+            "classes": [
+                {
+                    "id": "class-1",
+                    "name": "Class 1",
+                    "type": "class",
+                    "description": "Start your learning adventure with Class 1!",
+                    "order": 1,
+                    "icon": "🎒",
+                    "color": "#FF9E6D",
+                    "subjects": [
+                        {
+                            "id": "class1-english",
+                            "name": "English",
+                            "type": "subject",
+                            "description": "Read fun stories and learn new words!",
+                            "order": 1,
+                            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKdvIOWohthcnrzd9L_AU7Ev&si=WZbw2UHbXVt9tEYl",
+                            "teacher": "Diksha Mudgal",
+                            "icon": "📚",
+                            "textbook": "NCERT Class 1 English",
+                            "worksheet": "Class 1 English Worksheet"
+                        },
+                        {
+                            "id": "class1-hindi",
+                            "name": "Hindi",
+                            "type": "subject",
+                            "description": "Sing Hindi songs and learn letters!",
+                            "order": 2,
+                            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKevVNPNAj-uYC-L3dksfYFL&si=JhTcVw--VTPdftJr",
+                            "teacher": "Diksha Mudgal",
+                            "icon": "🇮🇳",
+                            "textbook": "NCERT Class 1 Hindi",
+                            "worksheet": "Class 1 Hindi Worksheet"
+                        },
+                        {
+                            "id": "class1-maths",
+                            "name": "Maths",
+                            "type": "subject",
+                            "description": "Count stars and solve number games!",
+                            "order": 3,
+                            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKeRxiZLZlr8egz4GTJJSCBf&si=EI4phMjY0rrCvVcA",
+                            "teacher": "Diksha Mudgal",
+                            "icon": "🔢",
+                            "textbook": "NCERT Class 1 Maths",
+                            "worksheet": "Class 1 Maths Worksheet"
+                        }
+                    ]
+                },
+                {
+                    "id": "class-2",
+                    "name": "Class 2",
+                    "type": "class",
+                    "description": "Grow smarter with Class 2 fun!",
+                    "order": 2,
+                    "icon": "🎒",
+                    "color": "#FF9E6D",
+                    "subjects": [
+                        {
+                            "id": "class2-english",
+                            "name": "English",
+                            "type": "subject",
+                            "description": "Explore exciting stories and words!",
+                            "order": 1,
+                            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKdhWRG0nypBEK3Vx3zKGCV6&si=jxvN_v6opPZ-1zx9",
+                            "teacher": "Diksha Mudgal",
+                            "icon": "📚",
+                            "textbook": "NCERT Class 2 English",
+                            "worksheet": "Class 2 English Worksheet"
+                        },
+                        {
+                            "id": "class2-hindi",
+                            "name": "Hindi",
+                            "type": "subject",
+                            "description": "Learn Hindi with fun poems!",
+                            "order": 2,
+                            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKdo_7d-wiUAiI4o-aBOd3_5&si=l-a-96yiHcOID2ux",
+                            "teacher": "Diksha Mudgal",
+                            "icon": "🇮🇳",
+                            "textbook": "NCERT Class 2 Hindi",
+                            "worksheet": "Class 2 Hindi Worksheet"
+                        },
+                        {
+                            "id": "class2-maths",
+                            "name": "Maths",
+                            "type": "subject",
+                            "description": "Play with numbers and solve puzzles!",
+                            "order": 3,
+                            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKcW5P0EYvD704ocgfdwxyKl&si=8FsKDqClisKbgyZE",
+                            "teacher": "Diksha Mudgal",
+                            "icon": "🔢",
+                            "textbook": "NCERT Class 2 Maths",
+                            "worksheet": "Class 2 Maths Worksheet"
+                        }
+                    ]
+                },
+                {
+                    "id": "class-3",
+                    "name": "Class 3",
+                    "type": "class",
+                    "description": "Be a learning superhero in Class 3!",
+                    "order": 3,
+                    "icon": "🎒",
+                    "color": "#FF9E6D",
+                    "subjects": [
+                        {
+                            "id": "class3-english",
+                            "name": "English",
+                            "type": "subject",
+                            "description": "Write stories like a cartoon hero!",
+                            "order": 1,
+                            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKfj9um90-HKSMX90u9UPkGY&si=KcaDD2925ZYpK6AP",
+                            "teacher": "Diksha Mudgal",
+                            "icon": "📚",
+                            "textbook": "NCERT Class 3 English",
+                            "worksheet": "Class 3 English Worksheet"
+                        },
+                        {
+                            "id": "class3-hindi",
+                            "name": "Hindi",
+                            "type": "subject",
+                            "description": "Discover Hindi with magical tales!",
+                            "order": 2,
+                            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKezS0LLFH_ABsacyjNhNWDM&si=h7yCw_frNvEqJKtD",
+                            "teacher": "Diksha Mudgal",
+                            "icon": "🇮🇳",
+                            "textbook": "NCERT Class 3 Hindi",
+                            "worksheet": "Class 3 Hindi Worksheet"
+                        },
+                        {
+                            "id": "class3-maths",
+                            "name": "Maths",
+                            "type": "subject",
+                            "description": "Solve fun math mysteries!",
+                            "order": 3,
+                            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKfBXVoG_gmvgTaYdvNKhJVf&si=Neo7Vq_Op8l6AF2f",
+                            "teacher": "Diksha Mudgal",
+                            "icon": "🔢",
+                            "textbook": "NCERT Class 3 Maths",
+                            "worksheet": "Class 3 Maths Worksheet"
+                        },
+                        {
+                            "id": "class3-evs",
+                            "name": "EVS",
+                            "type": "subject",
+                            "description": "Explore the world around you!",
+                            "order": 4,
+                            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKfFP4LyatCBWBJGI9pd7Yng&si=ZYsE40Yt4bV4HBZB",
+                            "teacher": "Diksha Mudgal",
+                            "icon": "🌍",
+                            "textbook": "NCERT Class 3 EVS",
+                            "worksheet": "Class 3 EVS Worksheet"
+                        }
+                    ]
+                },
+                {
+                    "id": "class-4",
+                    "name": "Class 4",
+                    "type": "class",
+                    "description": "Explore new worlds with Class 4 lessons!",
+                    "order": 4,
+                    "icon": "🎒",
+                    "color": "#FF9E6D",
+                    "subjects": [
+                        {
+                            "id": "class4-english",
+                            "name": "English",
+                            "type": "subject",
+                            "description": "Read epic tales and shine!",
+                            "order": 1,
+                            "status": "videos coming soon",
+                            "teacher": "Diksha Mudgal",
+                            "icon": "📚",
+                            "textbook": "NCERT Class 4 English",
+                            "worksheet": "Class 4 English Worksheet"
+                        },
+                        {
+                            "id": "class4-hindi",
+                            "name": "Hindi",
+                            "type": "subject",
+                            "description": "Sing and learn Hindi stories!",
+                            "order": 2,
+                            "status": "videos coming soon",
+                            "teacher": "Diksha Mudgal",
+                            "icon": "🇮🇳",
+                            "textbook": "NCERT Class 4 Hindi",
+                            "worksheet": "Class 4 Hindi Worksheet"
+                        },
+                        {
+                            "id": "class4-maths",
+                            "name": "Maths",
+                            "type": "subject",
+                            "description": "Crack number challenges like a wizard!",
+                            "order": 3,
+                            "status": "videos coming soon",
+                            "teacher": "Diksha Mudgal",
+                            "icon": "🔢",
+                            "textbook": "NCERT Class 4 Maths",
+                            "worksheet": "Class 4 Maths Worksheet"
+                        },
+                        {
+                            "id": "class4-evs",
+                            "name": "EVS",
+                            "type": "subject",
+                            "description": "Discover plants and animals!",
+                            "order": 4,
+                            "status": "videos coming soon",
+                            "teacher": "Diksha Mudgal",
+                            "icon": "🌍",
+                            "textbook": "NCERT Class 4 EVS",
+                            "worksheet": "Class 4 EVS Worksheet"
+                        }
+                    ]
+                },
+                {
+                    "id": "class-5",
+                    "name": "Class 5",
+                    "type": "class",
+                    "description": "Be a learning champion in Class 5!",
+                    "order": 5,
+                    "icon": "🎒",
+                    "color": "#FF9E6D",
+                    "subjects": [
+                        {
+                            "id": "class5-english",
+                            "name": "English",
+                            "type": "subject",
+                            "description": "Write stories like a superstar!",
+                            "order": 1,
+                            "status": "videos coming soon",
+                            "teacher": "Diksha Mudgal",
+                            "icon": "📚",
+                            "textbook": "NCERT Class 5 English",
+                            "worksheet": "Class 5 English Worksheet"
+                        },
+                        {
+                            "id": "class5-hindi",
+                            "name": "Hindi",
+                            "type": "subject",
+                            "description": "Learn Hindi with magical tales!",
+                            "order": 2,
+                            "status": "videos coming soon",
+                            "teacher": "Diksha Mudgal",
+                            "icon": "🇮🇳",
+                            "textbook": "NCERT Class 5 Hindi",
+                            "worksheet": "Class 5 Hindi Worksheet"
+                        },
+                        {
+                            "id": "class5-maths",
+                            "name": "Maths",
+                            "type": "subject",
+                            "description": "Solve epic math adventures!",
+                            "order": 3,
+                            "status": "videos coming soon",
+                            "teacher": "Diksha Mudgal",
+                            "icon": "🔢",
+                            "textbook": "NCERT Class 5 Maths",
+                            "worksheet": "Class 5 Maths Worksheet"
+                        },
+                        {
+                            "id": "class5-evs",
+                            "name": "EVS",
+                            "type": "subject",
+                            "description": "Explore nature and save the planet!",
+                            "order": 4,
+                            "status": "videos coming soon",
+                            "teacher": "Diksha Mudgal",
+                            "icon": "🌍",
+                            "textbook": "NCERT Class 5 EVS",
+                            "worksheet": "Class 5 EVS Worksheet"
+                        }
+                    ]
+                }
+            ]
+        },
+        "exams": {
+            "type": "exams",
+            "name": "Exams & Tests",
+            "description": "Cycle test/ half yearly/session ending!",
+            "classes": [
+                {
+                    "id": "class-1-exams",
+                    "name": "Class 1 Exams",
+                    "type": "exam-class",
+                    "description": "Fun tests for Class 1 champions!",
+                    "order": 1,
+                    "icon": "📝",
+                    "videoLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKcq"
+                },
+                {
+                    "id": "class-2-exams",
+                    "name": "Class 2 Exams",
+                    "type": "exam-class",
+                    "description": "Exciting challenges for Class 2 stars!",
+                    "order": 2,
+                    "icon": "📝",
+                    "videoLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKcq"
+                },
+                {
+                    "id": "class-3-exams",
+                    "name": "Class 3 Exams",
+                    "type": "exam-class",
+                    "description": "Be a superhero in Class 3 exams!",
+                    "order": 3,
+                    "icon": "📝",
+                    "videoLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKcq"
+                },
+                {
+                    "id": "class-4-exams",
+                    "name": "Class 4 Exams",
+                    "type": "exam-class",
+                    "description": "Master your skills with Class 4 tests!",
+                    "order": 4,
+                    "icon": "📝",
+                    "videoLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKcq"
+                },
+                {
+                    "id": "class-5-exams",
+                    "name": "Class 5 Exams",
+                    "type": "exam-class",
+                    "description": "Champion level exams for Class 5!",
+                    "order": 5,
+                    "icon": "📝",
+                    "videoLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKcq"
+                }
+            ]
+        },
+        "funGamesAndActivities": {
+            "type": "activities",
+            "name": "Fun & Games",
+            "description": "Play awesome games like a cartoon superstar!",
+            "items": [
+                {
+                    "id": "game-1",
+                    "name": "Stories",
+                    "type": "game",
+                    "description": "Listen to the stories and fall in love",
+                    "instructions": "Cute little stories for my cute little munchkins",
+                    "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKeFwZWUgxG4Tn3FMEJjtfgI&si=UdDXgaJnyfzn1bEU",
+                    "ageGroup": "1-15",
+                    "duration": "15-20 minutes",
+                    "teacher": "Diksha Mudgal",
+                    "icon": "📚"
+                },
+                {
+                    "id": "game-2",
+                    "name": "Poems (English/Hindi)",
+                    "type": "game",
+                    "description": "These poems are something you will never forget",
+                    "instructions": "Listen to them and dedicated to your loved ones",
+                    "ageGroup": "1-15",
+                    "duration": "10-15 minutes",
+                    "youtubeLinkEnglish": "https://youtube.com/playlist?list=PLbJb8NOXXBKfb7QMpjTIAssyRLQYjXUoG&si=K5ZRFufkzj2pTsRX",
+                    "youtubeLinkHindi": "https://youtube.com/playlist?list=PLbJb8NOXXBKfm2mNdOT-OwUbz0hCZVYbP&si=8Qcj8mkAHZXRx7MD",
+                    "teacher": "Diksha Mudgal",
+                    "icon": "🎵"
+                },
+                {
+                    "id": "rhyming-fun",
+                    "name": "Rhyming Fun with Kaju",
+                    "type": "activity",
+                    "description": "Enjoy this sweet rhyming story about Kaju's dream!",
+                    "instructions": "Read the poem aloud and enjoy the beautiful picture!",
+                    "ageGroup": "1-15",
+                    "duration": "5-10 minutes",
+                    "teacher": "Diksha Mudgal",
+                    "icon": "📖"
+                }
+            ]
+        }
+    };
+
+    // Navigation scrolling function
+    function scrollToSection(sectionId) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            const headerHeight = 160;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+
+            // Update active nav button
+            document.querySelectorAll('nav button').forEach(btn => {
+                btn.classList.remove('nav-active');
+            });
+            event.target.classList.add('nav-active');
+        }
+    }
+
+    // Initialize the page content
+    function initializePage() {
+        // Render Textbooks - ALL 5 CLASSES (WITH YouTube Links)
+        const classes = appData.curriculum.classes;
+        renderCards('textbooks-cards', classes, (cls) => `
+            <div class="icon">${cls.icon}</div>
+            <h3>${cls.name}</h3>
+            <p>${cls.description}</p>
+            <div style="margin-top: 15px;">
+                ${cls.subjects.map(sub => `
+                    <div style="margin: 10px 0; padding: 10px; background: #FFF8DC; border-radius: 8px;">
+                        <strong>${sub.icon} ${sub.name}</strong><br>
+                        <small>${sub.description}</small><br>
+                        <strong>Textbook:</strong> ${sub.textbook}<br>
+                        <a href="${sub.youtubeLink || '#'}" class="youtube-link" target="_blank">Watch Lessons 📺</a>
+                    </div>
+                `).join('')}
+            </div>
+        `);
+
+        // Render Worksheets - ALL 5 CLASSES (WITH Status for Classes 4 & 5)
+        renderCards('worksheets-cards', classes, (cls) => `
+            <div class="icon">${cls.icon}</div>
+            <h3>${cls.name}</h3>
+            <p>${cls.description}</p>
+            <div style="margin-top: 15px;">
+                ${cls.subjects.map(sub => `
+                    <div style="margin: 10px 0; padding: 10px; background: #E0F7FF; border-radius: 8px;">
+                        <strong>${sub.icon} ${sub.name}</strong><br>
+                        <strong>Worksheet:</strong> ${sub.worksheet}<br>
+                        ${sub.status ? `<div class="status-indicator">${sub.status}</div>` :
+            `<a href="${sub.youtubeLink}" class="youtube-link" target="_blank">Watch Lessons 📺</a>`}
+                    </div>
+                `).join('')}
+            </div>
+        `);
+
+        // Render Exams Section - Simple Class-wise with Video Button
+        const examClasses = appData.exams.classes;
+        renderCards('exams-cards', examClasses, (examClass) => `
+            <div class="icon">${examClass.icon}</div>
+            <h3>${examClass.name}</h3>
+            <p>${examClass.description}</p>
+            <div style="margin: 20px 0;">
+                <a href="${examClass.videoLink}" class="youtube-link" target="_blank" style="display: inline-block; padding: 12px 20px; font-size: 1.1em;">
+                    Watch Exam Videos 📺
+                </a>
+            </div>
+        `);
+
+        // Render Fun & Games
+        const games = appData.funGamesAndActivities.items;
+        const gamesContainer = document.getElementById('games-cards');
+        gamesContainer.innerHTML = '';
+
+        games.forEach(game => {
+            const card = document.createElement('div');
+            card.classList.add('activity-card', 'story-card');
+
+            // YouTube links handling
+            let youtubeLinksHTML = '';
+            if (game.youtubeLinkEnglish && game.youtubeLinkHindi) {
+                youtubeLinksHTML = `
+                    <div style="margin: 15px 0;">
+                        <a href="${game.youtubeLinkEnglish}" class="youtube-link" target="_blank">📖 English Poems</a>
+                        <a href="${game.youtubeLinkHindi}" class="youtube-link" target="_blank">📖 Hindi Poems</a>
+                    </div>
+                `;
+            } else if (game.youtubeLink) {
+                youtubeLinksHTML = `
+                    <div style="margin: 15px 0;">
+                        <a href="${game.youtubeLink}" class="youtube-link" target="_blank">📺 Watch on YouTube</a>
+                    </div>
+                `;
+            }
+
+            card.innerHTML = `
+                <div class="activity-icon">${game.icon}</div>
+                <h3>${game.name}</h3>
+                <p>${game.description}</p>
+                <p><strong>Instructions:</strong> ${game.instructions}</p>
+                ${youtubeLinksHTML}
+                <div class="activity-info">
+                    <span>👶 Age: ${game.ageGroup}</span>
+                    <span>⏱️ Time: ${game.duration}</span>
+                </div>
+            `;
+
+            gamesContainer.appendChild(card);
+        });
+    }
+
+    function renderCards(containerId, items, renderFunc) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = '';
+        items.forEach(item => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            card.innerHTML = renderFunc(item);
+            container.appendChild(card);
+        });
+    }
+
+    // Join form handling
+    const joinForm = document.getElementById('joinForm');
+    const thankYouMessage = document.getElementById('thankYouMessage');
+    const userEmailSpan = document.getElementById('userEmail');
+
+    if (joinForm && thankYouMessage) {
+        joinForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Get the email to display in thank you message
+            const email = document.getElementById('email').value;
+            const childName = document.getElementById('childName').value;
+
+            // Hide the form
+            joinForm.style.display = 'none';
+
+            // Show personalized thank you message
+            userEmailSpan.textContent = email;
+            thankYouMessage.style.display = 'block';
+
+            // Reset form after 5 seconds and show it again
+            setTimeout(() => {
+                joinForm.reset();
+                joinForm.style.display = 'block';
+                thankYouMessage.style.display = 'none';
+            }, 5000);
+        });
+    }
+
+    // Initialize the page when it loads
+    document.addEventListener('DOMContentLoaded', function() {
+        initializePage();
+
+        // Add scroll event to highlight active section in nav
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section');
+            const navButtons = document.querySelectorAll('nav button');
+
+            let currentSection = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 200;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    currentSection = section.id;
+                }
+            });
+
+            navButtons.forEach(btn => {
+                btn.classList.remove('nav-active');
+                if (btn.onclick && btn.onclick.toString().includes(currentSection)) {
+                    btn.classList.add('nav-active');
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

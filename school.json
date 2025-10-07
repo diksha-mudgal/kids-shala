@@ -1,0 +1,374 @@
+{
+  "metadata": {
+    "name": "Kids Shala",
+    "description": "Fun Learning Platform by Diksha Mudgal",
+    "version": "1.0",
+    "lastUpdated": "2024-01-01",
+    "logo": "/images/logo.png",
+    "channelName": "Kids Shala by Diksha Mudgal",
+    "socialLinks": {
+      "youtube": "https://youtube.com/@KidsShalaByDikshaMudgal",
+      "website": "https://kidsshala.com"
+    }
+  },
+  "curriculum": {
+    "type": "curriculum",
+    "name": "Magic Classes",
+    "description": "Super fun NCERT learning adventures for little stars!",
+    "classes": [
+      {
+        "id": "class-1",
+        "name": "Class 1",
+        "type": "class",
+        "description": "Start your learning adventure with Class 1!",
+        "order": 1,
+        "icon": "🎒",
+        "color": "#FF9E6D",
+        "subjects": [
+          {
+            "id": "class1-english",
+            "name": "English",
+            "type": "subject",
+            "description": "Read fun stories and learn new words!",
+            "order": 1,
+            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKcoHW7qfAmsK1cKszB1u18S&si=JggEuzdbubaY0NGD",
+            "teacher": "Diksha Mudgal",
+            "icon": "📚",
+            "textbook": "NCERT Class 1 English",
+            "worksheet": "Class 1 English Worksheet"
+          },
+          {
+            "id": "class1-hindi",
+            "name": "Hindi",
+            "type": "subject",
+            "description": "Sing Hindi songs and learn letters!",
+            "order": 2,
+            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKfQn3UD-SAQRhQ0wJDnBFJP&si=Xt0i52lmjKz4KgRM",
+            "teacher": "Diksha Mudgal",
+            "icon": "🇮🇳",
+            "textbook": "NCERT Class 1 Hindi",
+            "worksheet": "Class 1 Hindi Worksheet"
+          },
+          {
+            "id": "class1-maths",
+            "name": "Maths",
+            "type": "subject",
+            "description": "Count stars and solve number games!",
+            "order": 3,
+            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKd-vcyCFqZSpjKy6arRJLKM&si=ANv49teHAEkZvOEk",
+            "teacher": "Diksha Mudgal",
+            "icon": "🔢",
+            "textbook": "NCERT Class 1 Maths",
+            "worksheet": "Class 1 Maths Worksheet"
+          }
+        ]
+      },
+      {
+        "id": "class-2",
+        "name": "Class 2",
+        "type": "class",
+        "description": "Grow smarter with Class 2 fun!",
+        "order": 2,
+        "icon": "🎒",
+        "color": "#FF9E6D",
+        "subjects": [
+          {
+            "id": "class2-english",
+            "name": "English",
+            "type": "subject",
+            "description": "Explore exciting stories and words!",
+            "order": 1,
+            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKddZ0kZI3YZQcZyNueV0tTQ&si=s8AVZv5n-RmD1rS1",
+            "teacher": "Diksha Mudgal",
+            "icon": "📚",
+            "textbook": "NCERT Class 2 English",
+            "worksheet": "Class 2 English Worksheet"
+          },
+          {
+            "id": "class2-hindi",
+            "name": "Hindi",
+            "type": "subject",
+            "description": "Learn Hindi with fun poems!",
+            "order": 2,
+            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKeAWgueyRPe4Y_8L2x6Wvl8&si=Qr5x6TmUmpjCuqWU",
+            "teacher": "Diksha Mudgal",
+            "icon": "🇮🇳",
+            "textbook": "NCERT Class 2 Hindi",
+            "worksheet": "Class 2 Hindi Worksheet"
+          },
+          {
+            "id": "class2-maths",
+            "name": "Maths",
+            "type": "subject",
+            "description": "Play with numbers and solve puzzles!",
+            "order": 3,
+            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKdbiQNlZxGIIF-3mICAMPlV&si=0cpmnvC9Nffz7aHT",
+            "teacher": "Diksha Mudgal",
+            "icon": "🔢",
+            "textbook": "NCERT Class 2 Maths",
+            "worksheet": "Class 2 Maths Worksheet"
+          }
+        ]
+      },
+      {
+        "id": "class-3",
+        "name": "Class 3",
+        "type": "class",
+        "description": "Be a learning superhero in Class 3!",
+        "order": 3,
+        "icon": "🎒",
+        "color": "#FF9E6D",
+        "subjects": [
+          {
+            "id": "class3-english",
+            "name": "English",
+            "type": "subject",
+            "description": "Write stories like a cartoon hero!",
+            "order": 1,
+            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKfj9um90-HKSMX90u9UPkGY&si=KcaDD2925ZYpK6AP",
+            "teacher": "Diksha Mudgal",
+            "icon": "📚",
+            "textbook": "NCERT Class 3 English",
+            "worksheet": "Class 3 English Worksheet"
+          },
+          {
+            "id": "class3-hindi",
+            "name": "Hindi",
+            "type": "subject",
+            "description": "Discover Hindi with magical tales!",
+            "order": 2,
+            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKezS0LLFH_ABsacyjNhNWDM&si=h7yCw_frNvEqJKtD",
+            "teacher": "Diksha Mudgal",
+            "icon": "🇮🇳",
+            "textbook": "NCERT Class 3 Hindi",
+            "worksheet": "Class 3 Hindi Worksheet"
+          },
+          {
+            "id": "class3-maths",
+            "name": "Maths",
+            "type": "subject",
+            "description": "Solve fun math mysteries!",
+            "order": 3,
+            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKfBXVoG_gmvgTaYdvNKhJVf&si=Neo7Vq_Op8l6AF2f",
+            "teacher": "Diksha Mudgal",
+            "icon": "🔢",
+            "textbook": "NCERT Class 3 Maths",
+            "worksheet": "Class 3 Maths Worksheet"
+          },
+          {
+            "id": "class3-evs",
+            "name": "EVS",
+            "type": "subject",
+            "description": "Explore the world around you!",
+            "order": 4,
+            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKfFP4LyatCBWBJGI9pd7Yng&si=ZYsE40Yt4bV4HBZB",
+            "teacher": "Diksha Mudgal",
+            "icon": "🌍",
+            "textbook": "NCERT Class 3 EVS",
+            "worksheet": "Class 3 EVS Worksheet"
+          }
+        ]
+      },
+      {
+        "id": "class-4",
+        "name": "Class 4",
+        "type": "class",
+        "description": "Explore new worlds with Class 4 lessons!",
+        "order": 4,
+        "icon": "🎒",
+        "color": "#FF9E6D",
+        "subjects": [
+          {
+            "id": "class4-english",
+            "name": "English",
+            "type": "subject",
+            "description": "Read epic tales and shine!",
+            "order": 1,
+            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKfJ1u3yTjUQCR4Dmhc521HH&si=Y6z4tAnqIOXMUUz2",
+            "teacher": "Diksha Mudgal",
+            "icon": "📚",
+            "textbook": "NCERT Class 4 English",
+            "worksheet": "Class 4 English Worksheet"
+          },
+          {
+            "id": "class4-hindi",
+            "name": "Hindi",
+            "type": "subject",
+            "description": "Sing and learn Hindi stories!",
+            "order": 2,
+            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKc5IFoHovdHDUUFF4UfS8yl&si=boRQ-L7Zf3t2WmVy",
+            "teacher": "Diksha Mudgal",
+            "icon": "🇮🇳",
+            "textbook": "NCERT Class 4 Hindi",
+            "worksheet": "Class 4 Hindi Worksheet"
+          },
+          {
+            "id": "class4-maths",
+            "name": "Maths",
+            "type": "subject",
+            "description": "Crack number challenges like a wizard!",
+            "order": 3,
+            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKdYZvinkfgY8nF694GVeTC4&si=LHeu8y2LcugDWGnU",
+            "teacher": "Diksha Mudgal",
+            "icon": "🔢",
+            "textbook": "NCERT Class 4 Maths",
+            "worksheet": "Class 4 Maths Worksheet"
+          },
+          {
+            "id": "class4-evs",
+            "name": "EVS",
+            "type": "subject",
+            "description": "Discover plants and animals!",
+            "order": 4,
+            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKe-V6dgwmeRfRwbhPX-sEJo&si=AKmSnHTMqA3xAEyF",
+            "teacher": "Diksha Mudgal",
+            "icon": "🌍",
+            "textbook": "NCERT Class 4 EVS",
+            "worksheet": "Class 4 EVS Worksheet"
+          }
+        ]
+      },
+      {
+        "id": "class-5",
+        "name": "Class 5",
+        "type": "class",
+        "description": "Be a learning champion in Class 5!",
+        "order": 5,
+        "icon": "🎒",
+        "color": "#FF9E6D",
+        "subjects": [
+          {
+            "id": "class5-english",
+            "name": "English",
+            "type": "subject",
+            "description": "Write stories like a superstar!",
+            "order": 1,
+            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKfRg9hya737XRTakLWLt8l9&si=WMODDtlTXTqXocUm",
+            "teacher": "Diksha Mudgal",
+            "icon": "📚",
+            "textbook": "NCERT Class 5 English",
+            "worksheet": "Class 5 English Worksheet"
+          },
+          {
+            "id": "class5-hindi",
+            "name": "Hindi",
+            "type": "subject",
+            "description": "Learn Hindi with magical tales!",
+            "order": 2,
+            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKc1xvP_Bj_lYVI3HghA5zjb&si=mDnlI08JAsWvP3vt",
+            "teacher": "Diksha Mudgal",
+            "icon": "🇮🇳",
+            "textbook": "NCERT Class 5 Hindi",
+            "worksheet": "Class 5 Hindi Worksheet"
+          },
+          {
+            "id": "class5-maths",
+            "name": "Maths",
+            "type": "subject",
+            "description": "Solve epic math adventures!",
+            "order": 3,
+            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKe0ihqvDxfLphMOgTYr1ACP&si=ppv0TyHGN3ywFzcq",
+            "teacher": "Diksha Mudgal",
+            "icon": "🔢",
+            "textbook": "NCERT Class 5 Maths",
+            "worksheet": "Class 5 Maths Worksheet"
+          },
+          {
+            "id": "class5-evs",
+            "name": "EVS",
+            "type": "subject",
+            "description": "Explore nature and save the planet!",
+            "order": 4,
+            "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKemA6QcBWi9p4MXqT-t3B6U&si=9Rp4f4CANjJYW7ft",
+            "teacher": "Diksha Mudgal",
+            "icon": "🌍",
+            "textbook": "NCERT Class 5 EVS",
+            "worksheet": "Class 5 EVS Worksheet"
+          }
+        ]
+      }
+    ]
+  },
+  "funGamesAndActivities": {
+    "type": "activities",
+    "name": "Fun & Games",
+    "description": "Play awesome games like a cartoon superstar!",
+    "items": [
+      {
+        "id": "game-1",
+        "name": "Stories",
+        "type": "game",
+        "description": "Listen to the stories and fall in love",
+        "instructions": "Cute little stories for my cute little munchkins",
+        "youtubeLink": "https://youtube.com/playlist?list=PLbJb8NOXXBKeFwZWUgxG4Tn3FMEJjtfgI&si=UdDXgaJnyfzn1bEU",
+        "ageGroup": "1-15",
+        "duration": "15-20 minutes",
+        "teacher": "Diksha Mudgal",
+        "icon": "📚"
+      },
+      {
+        "id": "game-2",
+        "name": "Poems (English/Hindi)",
+        "type": "game",
+        "description": "These poems are something you will never forget",
+        "instructions": "Listen to them and dedicated to your loved ones",
+        "ageGroup": "1-15",
+        "duration": "10-15 minutes",
+        "youtubeLinkEnglish": "https://youtube.com/playlist?list=PLbJb8NOXXBKfb7QMpjTIAssyRLQYjXUoG&si=K5ZRFufkzj2pTsRX",
+        "youtubeLinkHindi": "https://youtube.com/playlist?list=PLbJb8NOXXBKfm2mNdOT-OwUbz0hCZVYbP&si=8Qcj8mkAHZXRx7MD",
+        "teacher": "Diksha Mudgal",
+        "icon": "🎵"
+      },
+      {
+        "id": "rhyming-fun",
+        "name": "Rhyming Fun with Raju",
+        "type": "activity",
+        "description": "Enjoy this sweet rhyming story about Raju's dream!",
+        "instructions": "Read the poem aloud and enjoy the beautiful picture!",
+        "ageGroup": "1-15",
+        "duration": "5-10 minutes",
+        "teacher": "Diksha Mudgal",
+        "icon": "📖"
+      },
+      {
+        "id": "quiz-time",
+        "name": "Quiz Time!",
+        "type": "quiz",
+        "description": "Test your knowledge with 80 fun quizzes in 4 categories!",
+        "instructions": "Choose from General Knowledge, Math Puzzles, Science Facts, or Word Games",
+        "ageGroup": "6-15",
+        "duration": "15-30 minutes",
+        "teacher": "Diksha Mudgal",
+        "icon": "🧠",
+        "totalQuestions": 80,
+        "totalCategories": 4
+      },
+      {
+        "id": "memory-booster",
+        "name": "Memory Booster",
+        "type": "game",
+        "description": "Boost your memory with fun games! Coming Soon!",
+        "instructions": "Fun memory games to improve your brain power - Videos coming soon!",
+        "ageGroup": "4-15",
+        "duration": "10-15 minutes",
+        "teacher": "Diksha Mudgal",
+        "icon": "🧠",
+        "status": "coming-soon",
+        "skills": ["Memory", "Concentration", "Observation"]
+      },
+      {
+        "id": "riddles",
+        "name": "Riddles Challenge",
+        "type": "riddles",
+        "description": "Solve 100 fun riddles across 10 levels!",
+        "instructions": "Complete each level by solving all 10 riddles",
+        "ageGroup": "6-15",
+        "duration": "10-30 minutes",
+        "teacher": "Diksha Mudgal",
+        "icon": "🤔",
+        "totalRiddles": 100,
+        "totalLevels": 10
+      }
+    ]
+  }
+}
